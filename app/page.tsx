@@ -32,11 +32,13 @@ function Nav() {
 
 /* ─── Hero ─── */
 const heroSlides = [
-  { src: "/gallery/g11.jpg", alt: "JGFA players in action" },
-  { src: "/gallery/g12.jpg", alt: "JGFA skills training" },
-  { src: "/gallery/g1.jpg", alt: "JGFA coaching session" },
-  { src: "/gallery/g3.jpg", alt: "JGFA match play" },
-  { src: "/gallery/g5.jpg", alt: "JGFA session" },
+  { src: "/gallery/g13.jpg", alt: "JGFA players in action" },
+  { src: "/gallery/g17.jpg", alt: "JGFA skills training" },
+  { src: "/gallery/g20.jpg", alt: "JGFA coaching session" },
+  { src: "/gallery/g14.jpg", alt: "JGFA match play" },
+  { src: "/gallery/g22.jpg", alt: "JGFA session" },
+  { src: "/gallery/g11.jpg", alt: "JGFA in action" },
+  { src: "/gallery/g3.jpg", alt: "JGFA training" },
 ];
 
 function Hero() {
@@ -329,6 +331,21 @@ const galleryPhotos = [
   { src: "/gallery/g10.jpg", alt: "Session highlights" },
   { src: "/gallery/g11.jpg", alt: "JGFA action" },
   { src: "/gallery/g12.jpg", alt: "JGFA training" },
+  { src: "/gallery/g13.jpg", alt: "JGFA session" },
+  { src: "/gallery/g14.jpg", alt: "JGFA players" },
+  { src: "/gallery/g15.jpg", alt: "JGFA action" },
+  { src: "/gallery/g16.jpg", alt: "JGFA training" },
+  { src: "/gallery/g17.jpg", alt: "JGFA session" },
+  { src: "/gallery/g18.jpg", alt: "JGFA players" },
+  { src: "/gallery/g19.jpg", alt: "JGFA action" },
+  { src: "/gallery/g20.jpg", alt: "JGFA training" },
+  { src: "/gallery/g21.jpg", alt: "JGFA session" },
+  { src: "/gallery/g22.jpg", alt: "JGFA players" },
+  { src: "/gallery/g23.jpg", alt: "JGFA action" },
+  { src: "/gallery/g24.jpg", alt: "JGFA training" },
+  { src: "/gallery/g25.jpg", alt: "JGFA session" },
+  { src: "/gallery/g26.jpg", alt: "JGFA players" },
+  { src: "/gallery/g27.jpg", alt: "JGFA action" },
 ];
 
 function Gallery() {
