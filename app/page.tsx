@@ -361,32 +361,23 @@ function Gallery() {
           </h2>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-          {/* Feature first photo large */}
-          <div className="col-span-2 row-span-2 relative aspect-square rounded-2xl overflow-hidden">
-            <Image
-              src={galleryPhotos[0].src}
-              alt={galleryPhotos[0].alt}
-              fill
-              className="object-cover hover:scale-105 transition-transform duration-500"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-          {/* Remaining 9 photos */}
-          {galleryPhotos.slice(1).map((photo) => (
+          {galleryPhotos.map((photo) => (
             <div
               key={photo.src}
-              className="relative aspect-square rounded-2xl overflow-hidden"
+              className="relative rounded-2xl overflow-hidden bg-gray-100"
+              style={{ paddingBottom: "100%" }}
             >
               <Image
                 src={photo.src}
                 alt={photo.alt}
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 768px) 50vw, 25vw"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
               />
             </div>
           ))}
         </div>
+        <p className="text-center text-sm text-gray-400 mt-4">{galleryPhotos.length} photos</p>
       </div>
     </section>
   );
