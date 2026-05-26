@@ -8,9 +8,7 @@ function Nav() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
-            <span className="text-white text-xs font-black">J</span>
-          </div>
+          <Image src="/logo.jpg" alt="JGFA Football" width={36} height={36} className="rounded-sm object-contain" />
           <span className="font-bold text-gray-900 text-sm tracking-tight">
             JGFA Football
           </span>
@@ -536,9 +534,7 @@ function Footer() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 bg-green-600 rounded-full flex items-center justify-center">
-              <span className="text-white text-xs font-black">J</span>
-            </div>
+            <Image src="/logo.jpg" alt="JGFA Football" width={32} height={32} className="rounded-sm object-contain" />
             <span className="text-white font-bold text-sm">
               JGFA Football
             </span>
