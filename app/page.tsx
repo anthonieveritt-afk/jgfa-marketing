@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 /* ─── Nav ─── */
@@ -7,23 +8,19 @@ function Nav() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-sm border-b border-white/10">
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2">
           <Image src="/logo.jpg" alt="JGFA Football" width={56} height={56} className="rounded-md object-contain" />
-          <span className="font-bold text-white text-sm tracking-tight">
-            JGFA Football
-          </span>
-        </div>
+          <span className="font-bold text-white text-sm tracking-tight">JGFA Football</span>
+        </Link>
         <nav className="hidden md:flex items-center gap-8 text-sm text-white">
           <a href="#programs" className="hover:text-white transition-colors">Programs</a>
           <a href="#why" className="hover:text-white transition-colors">Why JGFA</a>
+          <Link href="/locations" className="hover:text-white transition-colors">Locations</Link>
           <a href="#gallery" className="hover:text-white transition-colors">Gallery</a>
           <a href="#contact" className="hover:text-white transition-colors">Contact</a>
         </nav>
-        <a
-          href="#contact"
-          className="bg-blue-700 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-blue-800 transition-colors"
-        >
-          Book a Trial Class — £10
+        <a href="#contact" className="bg-blue-700 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-blue-800 transition-colors">
+          Book a Trial — £10
         </a>
       </div>
     </header>
@@ -549,6 +546,7 @@ function Footer() {
           <div className="flex gap-6 text-xs">
             <a href="#programs" className="hover:text-white transition-colors">Programs</a>
             <a href="#why" className="hover:text-white transition-colors">Why JGFA</a>
+            <Link href="/locations" className="hover:text-white transition-colors">Locations</Link>
             <a href="#gallery" className="hover:text-white transition-colors">Gallery</a>
             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </div>
