@@ -517,10 +517,10 @@ function Contact() {
           <p className="text-center text-xs text-gray-400 mt-4">
             Or email us directly at{" "}
             <a
-              href="mailto:info@jgfa.co.uk"
+              href="mailto:jack.jgfa@outlook.com"
               className="text-green-600 hover:underline"
             >
-              info@jgfa.co.uk
+              jack.jgfa@outlook.com
             </a>
           </p>
         </div>
