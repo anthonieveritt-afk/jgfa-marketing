@@ -571,7 +571,7 @@ function Footer() {
             <a href="#gallery" className="hover:text-white transition-colors">Gallery</a>
             <a href="#contact" className="hover:text-white transition-colors">Contact</a>
           </div>
-          <p className="text-xs">© {new Date().getFullYear()} JGFA Football. All rights reserved.</p>
+          <p className="text-xs">© 2021 – 2026 JGFA Football. All rights reserved.</p>
         </div>
         <p className="text-center text-xs text-gray-600 border-t border-gray-800 pt-4">
           Sessions in Collier Row · Dagenham · Harold Hill · After-school at Mead Primary
