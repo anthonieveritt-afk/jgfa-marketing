@@ -12,7 +12,7 @@ function Nav() {
             <span className="text-white text-xs font-black">J</span>
           </div>
           <span className="font-bold text-gray-900 text-sm tracking-tight">
-            Junior Generation FA
+            JGFA Football
           </span>
         </div>
         <nav className="hidden md:flex items-center gap-8 text-sm text-gray-600">
@@ -62,7 +62,7 @@ function Hero() {
       <div className="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
         <div>
           <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-8 tracking-wide uppercase">
-            ⚽ Youth Football · Ages 4–16
+            ⚽ Youth Football · Ages 5–11
           </div>
           <h1 className="text-5xl md:text-6xl font-black text-gray-900 leading-tight tracking-tight mb-6">
             The Game
@@ -70,9 +70,12 @@ function Hero() {
             <span className="text-green-600">Starts Here.</span>
           </h1>
           <p className="text-xl text-gray-500 leading-relaxed mb-10 max-w-lg">
-            Professional coaching, real development, and a love for the game.
-            JGFA gives every young player the skills, confidence, and team
-            spirit to thrive on and off the pitch.
+            Football development and skills training for aspiring players aged
+            5–11. Sessions running across{" "}
+            <span className="text-gray-700 font-medium">
+              Collier Row, Dagenham, Harold Hill, Upminster &amp; Basildon
+            </span>{" "}
+            — give your child the edge.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
@@ -90,18 +93,18 @@ function Hero() {
           </div>
           <div className="mt-12 flex items-center gap-8 text-sm text-gray-400">
             <div>
-              <span className="block text-2xl font-black text-gray-900">4–16</span>
-              All ages welcome
+              <span className="block text-2xl font-black text-gray-900">5–11</span>
+              Ages welcome
             </div>
             <div className="w-px h-10 bg-gray-100" />
             <div>
-              <span className="block text-2xl font-black text-gray-900">Pro</span>
-              UEFA qualified coaches
+              <span className="block text-2xl font-black text-gray-900">5</span>
+              Locations across Essex
             </div>
             <div className="w-px h-10 bg-gray-100" />
             <div>
-              <span className="block text-2xl font-black text-gray-900">All</span>
-              Abilities, no tryouts
+              <span className="block text-2xl font-black text-gray-900">Free</span>
+              Trial session
             </div>
           </div>
         </div>
@@ -168,7 +171,7 @@ const programs = [
       "Technical skills: passing, shooting, dribbling",
       "Small-sided games and team play",
       "Progress tracked every term",
-      "Ages 5–16 · Mixed abilities welcome",
+      "Ages 5–11 · Mixed abilities welcome",
     ],
   },
   {
@@ -212,6 +215,9 @@ function Programs() {
             <br />
             every young player.
           </h2>
+          <p className="text-gray-400 text-sm mt-4">
+            Sessions available in Collier Row · Dagenham · Harold Hill · Upminster · Basildon
+          </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {programs.map((p) => (
@@ -511,10 +517,10 @@ function Contact() {
           <p className="text-center text-xs text-gray-400 mt-4">
             Or email us directly at{" "}
             <a
-              href="mailto:hello@jgfa.co.uk"
+              href="mailto:info@jgfa.co.uk"
               className="text-green-600 hover:underline"
             >
-              hello@jgfa.co.uk
+              info@jgfa.co.uk
             </a>
           </p>
         </div>
@@ -527,30 +533,27 @@ function Contact() {
 function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-400 py-12">
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-2">
-          <div className="w-7 h-7 bg-green-600 rounded-full flex items-center justify-center">
-            <span className="text-white text-xs font-black">J</span>
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 mb-6">
+          <div className="flex items-center gap-2">
+            <div className="w-7 h-7 bg-green-600 rounded-full flex items-center justify-center">
+              <span className="text-white text-xs font-black">J</span>
+            </div>
+            <span className="text-white font-bold text-sm">
+              JGFA Football
+            </span>
           </div>
-          <span className="text-white font-bold text-sm">
-            Junior Generation Football Academy
-          </span>
+          <div className="flex gap-6 text-xs">
+            <a href="#programs" className="hover:text-white transition-colors">Programs</a>
+            <a href="#why" className="hover:text-white transition-colors">Why JGFA</a>
+            <a href="#gallery" className="hover:text-white transition-colors">Gallery</a>
+            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+          </div>
+          <p className="text-xs">© {new Date().getFullYear()} JGFA Football. All rights reserved.</p>
         </div>
-        <div className="flex gap-6 text-xs">
-          <a href="#programs" className="hover:text-white transition-colors">
-            Programs
-          </a>
-          <a href="#why" className="hover:text-white transition-colors">
-            Why JGFA
-          </a>
-          <a href="#gallery" className="hover:text-white transition-colors">
-            Gallery
-          </a>
-          <a href="#contact" className="hover:text-white transition-colors">
-            Contact
-          </a>
-        </div>
-        <p className="text-xs">© {new Date().getFullYear()} JGFA. All rights reserved.</p>
+        <p className="text-center text-xs text-gray-600 border-t border-gray-800 pt-4">
+          Sessions in Collier Row · Dagenham · Harold Hill · Upminster · Basildon
+        </p>
       </div>
     </footer>
   );

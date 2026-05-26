@@ -2,21 +2,26 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Junior Generation Football Academy | Youth Football Coaching",
+  title: "JGFA Football | Youth Football in Collier Row, Dagenham, Harold Hill, Upminster & Basildon",
   description:
-    "Professional football coaching for young players. After-school clubs, holiday camps, and skills academies. Give your child the edge — join JGFA today.",
+    "Join our football development and skills training programme for aspiring players aged 5–11. Sessions in Collier Row, Dagenham, Harold Hill, Upminster & Basildon. Book a free trial today.",
   keywords: [
     "youth football",
+    "JGFA Football",
     "junior football academy",
-    "kids football coaching",
+    "kids football coaching Essex",
     "after school football club",
-    "football camps",
+    "football camps Dagenham",
+    "football Collier Row",
+    "football Harold Hill",
+    "football Upminster",
+    "football Basildon",
     "JGFA",
   ],
   openGraph: {
-    title: "Junior Generation Football Academy",
+    title: "JGFA Football — Sessions across Essex & East London",
     description:
-      "After-school clubs, holiday camps & skills training for young footballers.",
+      "Football development for ages 5–11. After-school clubs, holiday camps & skills training in Collier Row, Dagenham, Harold Hill, Upminster & Basildon.",
     type: "website",
   },
 };
