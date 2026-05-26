@@ -32,11 +32,11 @@ function Nav() {
 
 /* ─── Hero ─── */
 const heroSlides = [
-  { src: "/gallery/g1.jpg", alt: "JGFA players in action" },
-  { src: "/gallery/g3.jpg", alt: "JGFA skills training" },
-  { src: "/gallery/g5.jpg", alt: "JGFA coaching session" },
-  { src: "/gallery/g4.jpg", alt: "JGFA match play" },
-  { src: "/gallery/g2.jpg", alt: "JGFA session" },
+  { src: "/gallery/g11.jpg", alt: "JGFA players in action" },
+  { src: "/gallery/g12.jpg", alt: "JGFA skills training" },
+  { src: "/gallery/g1.jpg", alt: "JGFA coaching session" },
+  { src: "/gallery/g3.jpg", alt: "JGFA match play" },
+  { src: "/gallery/g5.jpg", alt: "JGFA session" },
 ];
 
 function Hero() {
@@ -327,6 +327,8 @@ const galleryPhotos = [
   { src: "/gallery/g8.jpg", alt: "Football drills" },
   { src: "/gallery/g9.jpg", alt: "JGFA camp" },
   { src: "/gallery/g10.jpg", alt: "Session highlights" },
+  { src: "/gallery/g11.jpg", alt: "JGFA action" },
+  { src: "/gallery/g12.jpg", alt: "JGFA training" },
 ];
 
 function Gallery() {
