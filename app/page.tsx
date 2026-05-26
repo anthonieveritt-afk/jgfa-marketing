@@ -74,54 +74,61 @@ function Hero() {
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 bg-black/65" />
 
-      {/* Content — centred stack */}
-      <div className="relative z-10 w-full max-w-5xl mx-auto px-6 flex flex-col items-center text-center">
+      {/* Content — logo left, text right */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
 
-        {/* Massive logo with blend-through + pulse */}
-        <div style={{
-          animation: 'logoPulse 3s ease-in-out infinite',
-          filter: 'drop-shadow(0 0 40px rgba(255,255,255,0.3)) drop-shadow(0 0 80px rgba(29,78,216,0.5))'
-        }}>
-          <Image
-            src="/logo.jpg"
-            alt="JGFA Football Crest"
-            width={420}
-            height={420}
-            className="object-contain"
-            style={{ mixBlendMode: 'screen' }}
-            priority
-          />
-        </div>
+          {/* Massive logo — no white bg, pulsing */}
+          <div className="shrink-0" style={{
+            animation: 'logoPulse 3s ease-in-out infinite',
+            filter: 'drop-shadow(0 0 30px rgba(29,78,216,0.7)) drop-shadow(0 0 60px rgba(255,255,255,0.2))'
+          }}>
+            <Image
+              src="/logo.png"
+              alt="JGFA Football Crest"
+              width={380}
+              height={380}
+              className="object-contain"
+              priority
+            />
+          </div>
 
-        {/* Text below logo */}
-        <h1 className="text-4xl md:text-6xl font-black leading-tight tracking-tight mb-4 text-white" style={{textShadow:'0 2px 20px rgba(0,0,0,0.9)', marginTop: '-20px'}}>
-          The Game <span className="text-blue-400">Starts Here.</span>
-        </h1>
-        <p className="text-base md:text-lg text-white/90 mb-2" style={{textShadow:'0 1px 8px rgba(0,0,0,0.8)'}}>
-          Football development &amp; skills training · Ages 5–11
-        </p>
-        <p className="text-sm text-white/70 mb-8">Collier Row · Dagenham · Harold Hill · Mead Primary</p>
-        <div className="flex flex-col sm:flex-row gap-4 mb-10">
-          <a href="#contact" className="bg-blue-700 text-white font-bold px-8 py-4 rounded-full hover:bg-blue-800 transition-colors shadow-xl">
-            Book a Trial Class — £10
-          </a>
-          <a href="#programs" className="bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-4 rounded-full hover:bg-white/30 transition-colors border border-white/40">
-            See Our Programs
-          </a>
-        </div>
-        <div className="flex items-center gap-8 text-sm text-white">
-          <div><span className="block text-2xl font-black">5–11</span><span className="text-white/80">Ages</span></div>
-          <div className="w-px h-8 bg-white/20" />
-          <div><span className="block text-2xl font-black">4</span><span className="text-white/80">Locations</span></div>
-          <div className="w-px h-8 bg-white/20" />
-          <div><span className="block text-2xl font-black">£10</span><span className="text-white/80">Trial class</span></div>
+          {/* Text */}
+          <div className="text-white flex-1 text-center md:text-left">
+            <div className="inline-flex items-center gap-2 bg-black/40 backdrop-blur-sm text-white text-xs font-semibold px-4 py-2 rounded-full mb-6 tracking-widest uppercase border border-white/20">
+              ⚽ Youth Football · Ages 5–11
+            </div>
+            <h1 className="text-5xl md:text-7xl font-black leading-none tracking-tight mb-5" style={{textShadow:'0 2px 20px rgba(0,0,0,0.9)'}}>
+              The Game<br/>
+              <span className="text-blue-400">Starts Here.</span>
+            </h1>
+            <p className="text-lg text-white leading-relaxed mb-2" style={{textShadow:'0 1px 8px rgba(0,0,0,0.8)'}}>
+              Football development &amp; skills training for aspiring players aged 5–11.
+            </p>
+            <p className="text-sm text-white/80 mb-8">Collier Row · Dagenham · Harold Hill · After-school at Mead Primary</p>
+            <div className="flex flex-col sm:flex-row gap-4 mb-10 justify-center md:justify-start">
+              <a href="#contact" className="bg-blue-700 text-white font-bold px-8 py-4 rounded-full hover:bg-blue-800 transition-colors shadow-xl text-center">
+                Book a Trial Class — £10
+              </a>
+              <a href="#programs" className="bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-4 rounded-full hover:bg-white/30 transition-colors border border-white/40 text-center">
+                See Our Programs
+              </a>
+            </div>
+            <div className="flex items-center gap-8 text-sm justify-center md:justify-start">
+              <div><span className="block text-2xl font-black">5–11</span><span className="text-white/80">Ages</span></div>
+              <div className="w-px h-8 bg-white/20" />
+              <div><span className="block text-2xl font-black">4</span><span className="text-white/80">Locations</span></div>
+              <div className="w-px h-8 bg-white/20" />
+              <div><span className="block text-2xl font-black">£10</span><span className="text-white/80">Trial class</span></div>
+            </div>
+          </div>
         </div>
       </div>
 
       <style>{`
         @keyframes logoPulse {
           0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.06); }
+          50% { transform: scale(1.07); }
         }
       `}</style>
 
