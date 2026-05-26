@@ -433,7 +433,7 @@ function Testimonials() {
             What Parents Say
           </p>
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
-            Heard from the touchline.
+            Heard from the sideline.
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
