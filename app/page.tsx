@@ -75,50 +75,60 @@ function Hero() {
       <div className="absolute inset-0 bg-black/65" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
-        <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-4 py-2 rounded-full mb-8 tracking-widest uppercase border border-white/30">
-          ⚽ Youth Football · Ages 5–11
-        </div>
-        <h1 className="text-6xl md:text-8xl font-black leading-none tracking-tight mb-6 drop-shadow-lg">
-          The Game
-          <br />
-          <span className="text-blue-400">Starts Here.</span>
-        </h1>
-        <p className="text-xl md:text-2xl text-white leading-relaxed mb-10 max-w-2xl mx-auto">
-          Football development &amp; skills training for aspiring players aged 5–11.
-          <br className="hidden md:block" />
-          <span className="text-white/90 text-lg">Collier Row · Dagenham · Harold Hill · After-school at Mead Primary</span>
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="#contact"
-            className="bg-blue-700 text-white font-bold px-10 py-4 rounded-full hover:bg-blue-800 transition-colors text-base shadow-xl"
-          >
-            Book a Trial Class — £10
-          </a>
-          <a
-            href="#programs"
-            className="bg-white/20 backdrop-blur-sm text-white font-semibold px-10 py-4 rounded-full hover:bg-white/30 transition-colors text-base border border-white/40"
-          >
-            See Our Programs
-          </a>
-        </div>
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row items-center md:items-center gap-10">
 
-        {/* Stats bar */}
-        <div className="mt-16 flex items-center justify-center gap-10 text-sm" style={{textShadow:'0 1px 6px rgba(0,0,0,0.8)'}}>
-          <div>
-            <span className="block text-3xl font-black">5–11</span>
-            <span className="text-white/90">Ages welcome</span>
+          {/* Large prominent logo */}
+          <div className="shrink-0">
+            <Image
+              src="/logo.jpg"
+              alt="JGFA Football Crest"
+              width={240}
+              height={240}
+              className="object-contain drop-shadow-2xl"
+              priority
+            />
           </div>
-          <div className="w-px h-10 bg-white/20" />
-          <div>
-            <span className="block text-3xl font-black">4</span>
-            <span className="text-white/90">Locations</span>
-          </div>
-          <div className="w-px h-10 bg-white/20" />
-          <div>
-            <span className="block text-3xl font-black">£10</span>
-            <span className="text-white/90">Trial class</span>
+
+          {/* Text */}
+          <div className="text-white flex-1 md:text-left text-center">
+            <div className="inline-flex items-center gap-2 bg-black/40 backdrop-blur-sm text-white text-xs font-semibold px-4 py-2 rounded-full mb-6 tracking-widest uppercase border border-white/20">
+              ⚽ Youth Football · Ages 5–11
+            </div>
+            <h1 className="text-5xl md:text-7xl font-black leading-none tracking-tight mb-5" style={{textShadow:'0 2px 20px rgba(0,0,0,0.9)'}}>
+              The Game
+              <br />
+              <span className="text-blue-400">Starts Here.</span>
+            </h1>
+            <p className="text-lg md:text-xl text-white leading-relaxed mb-8 max-w-xl" style={{textShadow:'0 1px 8px rgba(0,0,0,0.8)'}}>
+              Football development &amp; skills training for aspiring players aged 5–11.
+              <br className="hidden md:block" />
+              <span className="text-white/90 text-base">Collier Row · Dagenham · Harold Hill · After-school at Mead Primary</span>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 mb-10 justify-center md:justify-start">
+              <a href="#contact" className="bg-blue-700 text-white font-bold px-8 py-4 rounded-full hover:bg-blue-800 transition-colors text-base shadow-xl text-center">
+                Book a Trial Class — £10
+              </a>
+              <a href="#programs" className="bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-4 rounded-full hover:bg-white/30 transition-colors text-base border border-white/40 text-center">
+                See Our Programs
+              </a>
+            </div>
+            <div className="flex items-center gap-8 text-sm justify-center md:justify-start" style={{textShadow:'0 1px 6px rgba(0,0,0,0.8)'}}>
+              <div>
+                <span className="block text-2xl font-black">5–11</span>
+                <span className="text-white/90">Ages welcome</span>
+              </div>
+              <div className="w-px h-8 bg-white/20" />
+              <div>
+                <span className="block text-2xl font-black">4</span>
+                <span className="text-white/90">Locations</span>
+              </div>
+              <div className="w-px h-8 bg-white/20" />
+              <div>
+                <span className="block text-2xl font-black">£10</span>
+                <span className="text-white/90">Trial class</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
