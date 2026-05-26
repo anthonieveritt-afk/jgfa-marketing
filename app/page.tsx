@@ -14,22 +14,22 @@ function Nav() {
           </span>
         </div>
         <nav className="hidden md:flex items-center gap-8 text-sm text-gray-600">
-          <a href="#programs" className="hover:text-green-600 transition-colors">
+          <a href="#programs" className="hover:text-blue-700 transition-colors">
             Programs
           </a>
-          <a href="#why" className="hover:text-green-600 transition-colors">
+          <a href="#why" className="hover:text-blue-700 transition-colors">
             Why JGFA
           </a>
-          <a href="#gallery" className="hover:text-green-600 transition-colors">
+          <a href="#gallery" className="hover:text-blue-700 transition-colors">
             Gallery
           </a>
-          <a href="#contact" className="hover:text-green-600 transition-colors">
+          <a href="#contact" className="hover:text-blue-700 transition-colors">
             Contact
           </a>
         </nav>
         <a
           href="#contact"
-          className="bg-green-600 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-green-700 transition-colors"
+          className="bg-blue-700 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-blue-800 transition-colors"
         >
           Book a Free Trial
         </a>
@@ -59,13 +59,13 @@ function Hero() {
     <section className="pt-16 bg-white min-h-screen flex items-center">
       <div className="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
         <div>
-          <div className="inline-flex items-center gap-2 bg-green-50 text-green-700 text-xs font-semibold px-3 py-1.5 rounded-full mb-8 tracking-wide uppercase">
+          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-800 text-xs font-semibold px-3 py-1.5 rounded-full mb-8 tracking-wide uppercase">
             ⚽ Youth Football · Ages 5–11
           </div>
           <h1 className="text-5xl md:text-6xl font-black text-gray-900 leading-tight tracking-tight mb-6">
             The Game
             <br />
-            <span className="text-green-600">Starts Here.</span>
+            <span className="text-blue-700">Starts Here.</span>
           </h1>
           <p className="text-xl text-gray-500 leading-relaxed mb-10 max-w-lg">
             Football development and skills training for aspiring players aged
@@ -78,13 +78,13 @@ function Hero() {
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="#contact"
-              className="bg-green-600 text-white font-bold px-8 py-4 rounded-full text-center hover:bg-green-700 transition-colors text-base"
+              className="bg-blue-700 text-white font-bold px-8 py-4 rounded-full text-center hover:bg-blue-800 transition-colors text-base"
             >
               Book a Free Trial Session
             </a>
             <a
               href="#programs"
-              className="border border-gray-200 text-gray-700 font-semibold px-8 py-4 rounded-full text-center hover:border-green-600 hover:text-green-600 transition-colors text-base"
+              className="border border-gray-200 text-gray-700 font-semibold px-8 py-4 rounded-full text-center hover:border-blue-700 hover:text-blue-700 transition-colors text-base"
             >
               See Our Programs
             </a>
@@ -141,7 +141,7 @@ function Hero() {
           </div>
           {/* Floating badge */}
           <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3">
-            <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center text-xl">
+            <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-xl">
               ⚽
             </div>
             <div>
@@ -205,7 +205,7 @@ function Programs() {
     <section id="programs" className="bg-gray-50 py-28">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-green-600 text-sm font-bold uppercase tracking-widest mb-3">
+          <p className="text-blue-700 text-sm font-bold uppercase tracking-widest mb-3">
             What We Offer
           </p>
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
@@ -224,7 +224,7 @@ function Programs() {
               className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
             >
               <div className="text-4xl mb-4">{p.emoji}</div>
-              <div className="text-xs text-green-600 font-semibold uppercase tracking-widest mb-1">
+              <div className="text-xs text-blue-700 font-semibold uppercase tracking-widest mb-1">
                 {p.subtitle}
               </div>
               <h3 className="text-xl font-black text-gray-900 mb-3">
@@ -239,7 +239,7 @@ function Programs() {
                     key={b}
                     className="flex items-start gap-2 text-sm text-gray-600"
                   >
-                    <span className="text-green-500 mt-0.5 shrink-0">✓</span>
+                    <span className="text-blue-600 mt-0.5 shrink-0">✓</span>
                     {b}
                   </li>
                 ))}
@@ -250,7 +250,7 @@ function Programs() {
         <div className="text-center mt-12">
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 bg-green-600 text-white font-bold px-8 py-4 rounded-full hover:bg-green-700 transition-colors"
+            className="inline-flex items-center gap-2 bg-blue-700 text-white font-bold px-8 py-4 rounded-full hover:bg-blue-800 transition-colors"
           >
             Enrol Your Child Today →
           </a>
@@ -299,7 +299,7 @@ function Why() {
     <section id="why" className="bg-white py-28">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-green-600 text-sm font-bold uppercase tracking-widest mb-3">
+          <p className="text-blue-700 text-sm font-bold uppercase tracking-widest mb-3">
             Why Choose Us
           </p>
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
@@ -338,7 +338,7 @@ function Gallery() {
     <section id="gallery" className="bg-gray-50 py-28">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="text-green-600 text-sm font-bold uppercase tracking-widest mb-3">
+          <p className="text-blue-700 text-sm font-bold uppercase tracking-widest mb-3">
             See It in Action
           </p>
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
@@ -349,7 +349,7 @@ function Gallery() {
           {gallerySlots.map((_, i) => (
             <div
               key={i}
-              className="aspect-square rounded-2xl bg-gradient-to-br from-green-100 to-green-200 flex flex-col items-center justify-center text-green-400 overflow-hidden"
+              className="aspect-square rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex flex-col items-center justify-center text-blue-500 overflow-hidden"
             >
               <svg
                 className="w-10 h-10 mb-2 opacity-50"
@@ -403,7 +403,7 @@ function Testimonials() {
     <section className="bg-white py-28">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16">
-          <p className="text-green-600 text-sm font-bold uppercase tracking-widest mb-3">
+          <p className="text-blue-700 text-sm font-bold uppercase tracking-widest mb-3">
             What Parents Say
           </p>
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
@@ -416,7 +416,7 @@ function Testimonials() {
               key={t.name}
               className="bg-gray-50 rounded-3xl p-8 border border-gray-100"
             >
-              <div className="text-green-500 text-3xl mb-4">"</div>
+              <div className="text-blue-600 text-3xl mb-4">"</div>
               <p className="text-gray-700 leading-relaxed mb-6 text-sm">
                 {t.quote}
               </p>
@@ -435,12 +435,12 @@ function Testimonials() {
 /* ─── Contact / CTA ─── */
 function Contact() {
   return (
-    <section id="contact" className="bg-green-600 py-28">
+    <section id="contact" className="bg-blue-700 py-28">
       <div className="max-w-3xl mx-auto px-6 text-center">
         <h2 className="text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
           Ready to kick off?
         </h2>
-        <p className="text-green-100 text-lg mb-10 max-w-xl mx-auto">
+        <p className="text-blue-100 text-lg mb-10 max-w-xl mx-auto">
           Book your child's free trial session today — no commitment, no
           pressure. Just football. We'll take it from there.
         </p>
@@ -460,7 +460,7 @@ function Contact() {
                 <input
                   type="text"
                   placeholder="Your name"
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                 />
               </div>
               <div>
@@ -470,7 +470,7 @@ function Contact() {
                 <input
                   type="text"
                   placeholder="e.g. Marcus, age 8"
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                 />
               </div>
             </div>
@@ -481,14 +481,14 @@ function Contact() {
               <input
                 type="email"
                 placeholder="you@email.com"
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
               />
             </div>
             <div>
               <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1.5">
                 Interested In
               </label>
-              <select className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+              <select className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
                 <option>After-School Club</option>
                 <option>Holiday Camp</option>
                 <option>Skills Academy</option>
@@ -502,12 +502,12 @@ function Contact() {
               <textarea
                 rows={3}
                 placeholder="Any questions, experience level, availability..."
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
+                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent resize-none"
               />
             </div>
             <button
               type="submit"
-              className="w-full bg-green-600 text-white font-bold py-4 rounded-xl hover:bg-green-700 transition-colors text-sm tracking-wide"
+              className="w-full bg-blue-700 text-white font-bold py-4 rounded-xl hover:bg-blue-800 transition-colors text-sm tracking-wide"
             >
               Book Free Trial Session →
             </button>
@@ -516,7 +516,7 @@ function Contact() {
             Or email us directly at{" "}
             <a
               href="mailto:jack.jgfa@outlook.com"
-              className="text-green-600 hover:underline"
+              className="text-blue-700 hover:underline"
             >
               jack.jgfa@outlook.com
             </a>
