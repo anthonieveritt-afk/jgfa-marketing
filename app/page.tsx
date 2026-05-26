@@ -5,27 +5,19 @@ import { useState, useEffect } from "react";
 /* ─── Nav ─── */
 function Nav() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm border-b border-gray-100">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-sm border-b border-white/10">
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Image src="/logo.jpg" alt="JGFA Football" width={56} height={56} className="rounded-md object-contain" />
-          <span className="font-bold text-gray-900 text-sm tracking-tight">
+          <span className="font-bold text-white text-sm tracking-tight">
             JGFA Football
           </span>
         </div>
-        <nav className="hidden md:flex items-center gap-8 text-sm text-gray-600">
-          <a href="#programs" className="hover:text-blue-700 transition-colors">
-            Programs
-          </a>
-          <a href="#why" className="hover:text-blue-700 transition-colors">
-            Why JGFA
-          </a>
-          <a href="#gallery" className="hover:text-blue-700 transition-colors">
-            Gallery
-          </a>
-          <a href="#contact" className="hover:text-blue-700 transition-colors">
-            Contact
-          </a>
+        <nav className="hidden md:flex items-center gap-8 text-sm text-white/80">
+          <a href="#programs" className="hover:text-white transition-colors">Programs</a>
+          <a href="#why" className="hover:text-white transition-colors">Why JGFA</a>
+          <a href="#gallery" className="hover:text-white transition-colors">Gallery</a>
+          <a href="#contact" className="hover:text-white transition-colors">Contact</a>
         </nav>
         <a
           href="#contact"
@@ -40,9 +32,11 @@ function Nav() {
 
 /* ─── Hero ─── */
 const heroSlides = [
-  { src: "/hero/hero1.jpg", alt: "Young players competing on the pitch" },
-  { src: "/hero/hero2.jpg", alt: "Football stadium lights" },
-  { src: "/hero/hero3.jpg", alt: "Junior football action" },
+  { src: "/gallery/g1.jpg", alt: "JGFA players in action" },
+  { src: "/gallery/g3.jpg", alt: "JGFA skills training" },
+  { src: "/gallery/g5.jpg", alt: "JGFA coaching session" },
+  { src: "/gallery/g4.jpg", alt: "JGFA match play" },
+  { src: "/gallery/g2.jpg", alt: "JGFA session" },
 ];
 
 function Hero() {
@@ -51,107 +45,98 @@ function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % heroSlides.length);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="pt-16 bg-white min-h-screen flex items-center">
-      <div className="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
-        <div>
-          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-800 text-xs font-semibold px-3 py-1.5 rounded-full mb-8 tracking-wide uppercase">
-            ⚽ Youth Football · Ages 5–11
+    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+      {/* Full-bleed background slides */}
+      {heroSlides.map((slide, i) => (
+        <div
+          key={slide.src}
+          className="absolute inset-0 transition-opacity duration-1500"
+          style={{ opacity: i === current ? 1 : 0 }}
+        >
+          <Image
+            src={slide.src}
+            alt={slide.alt}
+            fill
+            className="object-cover object-center"
+            priority={i === 0}
+            sizes="100vw"
+          />
+        </div>
+      ))}
+
+      {/* Dark gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
+        <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-semibold px-4 py-2 rounded-full mb-8 tracking-widest uppercase border border-white/30">
+          ⚽ Youth Football · Ages 5–11
+        </div>
+        <h1 className="text-6xl md:text-8xl font-black leading-none tracking-tight mb-6 drop-shadow-lg">
+          The Game
+          <br />
+          <span className="text-blue-400">Starts Here.</span>
+        </h1>
+        <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto">
+          Football development &amp; skills training for aspiring players aged 5–11.
+          <br className="hidden md:block" />
+          <span className="text-white/60 text-lg">Collier Row · Dagenham · Harold Hill · Upminster · Basildon</span>
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#contact"
+            className="bg-blue-700 text-white font-bold px-10 py-4 rounded-full hover:bg-blue-800 transition-colors text-base shadow-xl"
+          >
+            Book a Free Trial Session
+          </a>
+          <a
+            href="#programs"
+            className="bg-white/20 backdrop-blur-sm text-white font-semibold px-10 py-4 rounded-full hover:bg-white/30 transition-colors text-base border border-white/40"
+          >
+            See Our Programs
+          </a>
+        </div>
+
+        {/* Stats bar */}
+        <div className="mt-16 flex items-center justify-center gap-10 text-sm">
+          <div>
+            <span className="block text-3xl font-black">5–11</span>
+            <span className="text-white/60">Ages welcome</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-black text-gray-900 leading-tight tracking-tight mb-6">
-            The Game
-            <br />
-            <span className="text-blue-700">Starts Here.</span>
-          </h1>
-          <p className="text-xl text-gray-500 leading-relaxed mb-10 max-w-lg">
-            Football development and skills training for aspiring players aged
-            5–11. Sessions running across{" "}
-            <span className="text-gray-700 font-medium">
-              Collier Row, Dagenham, Harold Hill, Upminster &amp; Basildon
-            </span>{" "}
-            — give your child the edge.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="#contact"
-              className="bg-blue-700 text-white font-bold px-8 py-4 rounded-full text-center hover:bg-blue-800 transition-colors text-base"
-            >
-              Book a Free Trial Session
-            </a>
-            <a
-              href="#programs"
-              className="border border-gray-200 text-gray-700 font-semibold px-8 py-4 rounded-full text-center hover:border-blue-700 hover:text-blue-700 transition-colors text-base"
-            >
-              See Our Programs
-            </a>
+          <div className="w-px h-10 bg-white/20" />
+          <div>
+            <span className="block text-3xl font-black">5</span>
+            <span className="text-white/60">Locations</span>
           </div>
-          <div className="mt-12 flex items-center gap-8 text-sm text-gray-400">
-            <div>
-              <span className="block text-2xl font-black text-gray-900">5–11</span>
-              Ages welcome
-            </div>
-            <div className="w-px h-10 bg-gray-100" />
-            <div>
-              <span className="block text-2xl font-black text-gray-900">5</span>
-              Locations across Essex
-            </div>
-            <div className="w-px h-10 bg-gray-100" />
-            <div>
-              <span className="block text-2xl font-black text-gray-900">Free</span>
-              Trial session
-            </div>
+          <div className="w-px h-10 bg-white/20" />
+          <div>
+            <span className="block text-3xl font-black">Free</span>
+            <span className="text-white/60">Trial session</span>
           </div>
         </div>
-        <div className="relative hidden md:block">
-          <div className="aspect-[4/5] rounded-3xl overflow-hidden relative bg-gray-100">
-            {heroSlides.map((slide, i) => (
-              <div
-                key={slide.src}
-                className="absolute inset-0 transition-opacity duration-1000"
-                style={{ opacity: i === current ? 1 : 0 }}
-              >
-                <Image
-                  src={slide.src}
-                  alt={slide.alt}
-                  fill
-                  className="object-cover"
-                  priority={i === 0}
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
-              </div>
-            ))}
-            {/* Dark overlay for depth */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-3xl" />
-          </div>
-          {/* Dot indicators */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-            {heroSlides.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`w-2 h-2 rounded-full transition-all ${
-                  i === current ? "bg-white scale-125" : "bg-white/50"
-                }`}
-              />
-            ))}
-          </div>
-          {/* Floating badge */}
-          <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3">
-            <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center text-xl">
-              ⚽
-            </div>
-            <div>
-              <div className="text-xs text-gray-400">Season kicking off</div>
-              <div className="text-sm font-bold text-gray-900">
-                Register Now
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+
+      {/* Dot indicators */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+        {heroSlides.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`h-1.5 rounded-full transition-all duration-300 ${
+              i === current ? "bg-white w-8" : "bg-white/40 w-2"
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* Scroll hint */}
+      <div className="absolute bottom-8 right-8 z-10 text-white/40 text-xs tracking-widest rotate-90 hidden md:block">
+        SCROLL
       </div>
     </section>
   );
@@ -331,7 +316,18 @@ function Why() {
 }
 
 /* ─── Gallery ─── */
-const gallerySlots = Array.from({ length: 6 });
+const galleryPhotos = [
+  { src: "/gallery/g1.jpg", alt: "JGFA session action" },
+  { src: "/gallery/g2.jpg", alt: "Players on the pitch" },
+  { src: "/gallery/g3.jpg", alt: "Skills training" },
+  { src: "/gallery/g4.jpg", alt: "Match play" },
+  { src: "/gallery/g5.jpg", alt: "Coaching session" },
+  { src: "/gallery/g6.jpg", alt: "JGFA in action" },
+  { src: "/gallery/g7.jpg", alt: "Young players training" },
+  { src: "/gallery/g8.jpg", alt: "Football drills" },
+  { src: "/gallery/g9.jpg", alt: "JGFA camp" },
+  { src: "/gallery/g10.jpg", alt: "Session highlights" },
+];
 
 function Gallery() {
   return (
@@ -345,32 +341,33 @@ function Gallery() {
             Life at JGFA.
           </h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {gallerySlots.map((_, i) => (
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+          {/* Feature first photo large */}
+          <div className="col-span-2 row-span-2 relative aspect-square rounded-2xl overflow-hidden">
+            <Image
+              src={galleryPhotos[0].src}
+              alt={galleryPhotos[0].alt}
+              fill
+              className="object-cover hover:scale-105 transition-transform duration-500"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          {/* Remaining 9 photos */}
+          {galleryPhotos.slice(1).map((photo) => (
             <div
-              key={i}
-              className="aspect-square rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 flex flex-col items-center justify-center text-blue-500 overflow-hidden"
+              key={photo.src}
+              className="relative aspect-square rounded-2xl overflow-hidden"
             >
-              <svg
-                className="w-10 h-10 mb-2 opacity-50"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
-              </svg>
-              <p className="text-xs font-medium opacity-60">Photo {i + 1}</p>
+              <Image
+                src={photo.src}
+                alt={photo.alt}
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 50vw, 25vw"
+              />
             </div>
           ))}
         </div>
-        <p className="text-center text-sm text-gray-400 mt-6">
-          Photos coming soon — check back shortly!
-        </p>
       </div>
     </section>
   );
