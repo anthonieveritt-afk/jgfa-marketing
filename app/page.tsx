@@ -318,41 +318,66 @@ function Why() {
 }
 
 /* ─── Gallery ─── */
-const galleryPhotos = [
-  { src: "/gallery/g1.jpg", alt: "JGFA session action" },
-  { src: "/gallery/g2.jpg", alt: "Players on the pitch" },
-  { src: "/gallery/g3.jpg", alt: "Skills training" },
-  { src: "/gallery/g4.jpg", alt: "Match play" },
-  { src: "/gallery/g5.jpg", alt: "Coaching session" },
-  { src: "/gallery/g6.jpg", alt: "JGFA in action" },
-  { src: "/gallery/g7.jpg", alt: "Young players training" },
-  { src: "/gallery/g8.jpg", alt: "Football drills" },
-  { src: "/gallery/g9.jpg", alt: "JGFA camp" },
-  { src: "/gallery/g10.jpg", alt: "Session highlights" },
-  { src: "/gallery/g11.jpg", alt: "JGFA action" },
-  { src: "/gallery/g12.jpg", alt: "JGFA training" },
-  { src: "/gallery/g13.jpg", alt: "JGFA session" },
-  { src: "/gallery/g14.jpg", alt: "JGFA players" },
-  { src: "/gallery/g15.jpg", alt: "JGFA action" },
-  { src: "/gallery/g16.jpg", alt: "JGFA training" },
-  { src: "/gallery/g17.jpg", alt: "JGFA session" },
-  { src: "/gallery/g18.jpg", alt: "JGFA players" },
-  { src: "/gallery/g19.jpg", alt: "JGFA action" },
-  { src: "/gallery/g20.jpg", alt: "JGFA training" },
-  { src: "/gallery/g21.jpg", alt: "JGFA session" },
-  { src: "/gallery/g22.jpg", alt: "JGFA players" },
-  { src: "/gallery/g23.jpg", alt: "JGFA action" },
-  { src: "/gallery/g24.jpg", alt: "JGFA training" },
-  { src: "/gallery/g25.jpg", alt: "JGFA session" },
-  { src: "/gallery/g26.jpg", alt: "JGFA players" },
-  { src: "/gallery/g27.jpg", alt: "JGFA action" },
+const gallerySections = [
+  {
+    title: "May Football Camp 2026",
+    photos: [
+      { src: "/gallery/g28.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g29.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g30.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g31.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g32.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g33.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g34.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g35.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g36.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g37.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g38.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g39.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g40.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g41.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g42.jpg", alt: "May Camp 2026" },
+    ],
+  },
+  {
+    title: "Sessions & Training",
+    photos: [
+      { src: "/gallery/g1.jpg", alt: "JGFA session" },
+      { src: "/gallery/g2.jpg", alt: "JGFA session" },
+      { src: "/gallery/g3.jpg", alt: "JGFA session" },
+      { src: "/gallery/g4.jpg", alt: "JGFA session" },
+      { src: "/gallery/g5.jpg", alt: "JGFA session" },
+      { src: "/gallery/g6.jpg", alt: "JGFA session" },
+      { src: "/gallery/g7.jpg", alt: "JGFA session" },
+      { src: "/gallery/g8.jpg", alt: "JGFA session" },
+      { src: "/gallery/g9.jpg", alt: "JGFA session" },
+      { src: "/gallery/g10.jpg", alt: "JGFA session" },
+      { src: "/gallery/g11.jpg", alt: "JGFA session" },
+      { src: "/gallery/g12.jpg", alt: "JGFA session" },
+      { src: "/gallery/g13.jpg", alt: "JGFA session" },
+      { src: "/gallery/g14.jpg", alt: "JGFA session" },
+      { src: "/gallery/g15.jpg", alt: "JGFA session" },
+      { src: "/gallery/g16.jpg", alt: "JGFA session" },
+      { src: "/gallery/g17.jpg", alt: "JGFA session" },
+      { src: "/gallery/g18.jpg", alt: "JGFA session" },
+      { src: "/gallery/g19.jpg", alt: "JGFA session" },
+      { src: "/gallery/g20.jpg", alt: "JGFA session" },
+      { src: "/gallery/g21.jpg", alt: "JGFA session" },
+      { src: "/gallery/g22.jpg", alt: "JGFA session" },
+      { src: "/gallery/g23.jpg", alt: "JGFA session" },
+      { src: "/gallery/g24.jpg", alt: "JGFA session" },
+      { src: "/gallery/g25.jpg", alt: "JGFA session" },
+      { src: "/gallery/g26.jpg", alt: "JGFA session" },
+      { src: "/gallery/g27.jpg", alt: "JGFA session" },
+    ],
+  },
 ];
 
 function Gallery() {
   return (
     <section id="gallery" className="bg-gray-50 py-28">
       <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <p className="text-blue-700 text-sm font-bold uppercase tracking-widest mb-3">
             See It in Action
           </p>
@@ -360,24 +385,32 @@ function Gallery() {
             Life at JGFA.
           </h2>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-          {galleryPhotos.map((photo) => (
-            <div
-              key={photo.src}
-              className="relative rounded-2xl overflow-hidden bg-gray-100"
-              style={{ paddingBottom: "100%" }}
-            >
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-              />
+        {gallerySections.map((section) => (
+          <div key={section.title} className="mb-16">
+            <div className="flex items-center gap-4 mb-6">
+              <h3 className="text-xl font-black text-gray-900 whitespace-nowrap">{section.title}</h3>
+              <div className="flex-1 h-px bg-gray-200" />
+              <span className="text-xs text-gray-400 whitespace-nowrap">{section.photos.length} photos</span>
             </div>
-          ))}
-        </div>
-        <p className="text-center text-sm text-gray-400 mt-4">{galleryPhotos.length} photos</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+              {section.photos.map((photo) => (
+                <div
+                  key={photo.src}
+                  className="relative rounded-2xl overflow-hidden bg-gray-100"
+                  style={{ paddingBottom: "100%" }}
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
