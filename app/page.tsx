@@ -32,13 +32,13 @@ function Nav() {
 
 /* ─── Hero ─── */
 const heroSlides = [
-  { src: "/gallery/g13.jpg", alt: "JGFA players in action" },
-  { src: "/gallery/g17.jpg", alt: "JGFA skills training" },
-  { src: "/gallery/g20.jpg", alt: "JGFA coaching session" },
-  { src: "/gallery/g14.jpg", alt: "JGFA match play" },
-  { src: "/gallery/g22.jpg", alt: "JGFA session" },
+  { src: "/gallery/g28.jpg", alt: "JGFA May Camp 2026" },
   { src: "/gallery/g11.jpg", alt: "JGFA in action" },
   { src: "/gallery/g3.jpg", alt: "JGFA training" },
+  { src: "/gallery/g1.jpg", alt: "JGFA session" },
+  { src: "/gallery/g5.jpg", alt: "JGFA coaching" },
+  { src: "/gallery/g9.jpg", alt: "JGFA players" },
+  { src: "/gallery/g32.jpg", alt: "JGFA camp" },
 ];
 
 function Hero() {
@@ -57,7 +57,7 @@ function Hero() {
       {heroSlides.map((slide, i) => (
         <div
           key={slide.src}
-          className="absolute inset-0 transition-opacity duration-1500"
+          className="absolute inset-0 transition-opacity duration-1000"
           style={{ opacity: i === current ? 1 : 0 }}
         >
           <Image
@@ -354,21 +354,7 @@ const gallerySections = [
       { src: "/gallery/g10.jpg", alt: "JGFA session" },
       { src: "/gallery/g11.jpg", alt: "JGFA session" },
       { src: "/gallery/g12.jpg", alt: "JGFA session" },
-      { src: "/gallery/g13.jpg", alt: "JGFA session" },
-      { src: "/gallery/g14.jpg", alt: "JGFA session" },
-      { src: "/gallery/g15.jpg", alt: "JGFA session" },
-      { src: "/gallery/g16.jpg", alt: "JGFA session" },
-      { src: "/gallery/g17.jpg", alt: "JGFA session" },
-      { src: "/gallery/g18.jpg", alt: "JGFA session" },
-      { src: "/gallery/g19.jpg", alt: "JGFA session" },
-      { src: "/gallery/g20.jpg", alt: "JGFA session" },
-      { src: "/gallery/g21.jpg", alt: "JGFA session" },
-      { src: "/gallery/g22.jpg", alt: "JGFA session" },
-      { src: "/gallery/g23.jpg", alt: "JGFA session" },
-      { src: "/gallery/g24.jpg", alt: "JGFA session" },
-      { src: "/gallery/g25.jpg", alt: "JGFA session" },
-      { src: "/gallery/g26.jpg", alt: "JGFA session" },
-      { src: "/gallery/g27.jpg", alt: "JGFA session" },
+
     ],
   },
 ];
