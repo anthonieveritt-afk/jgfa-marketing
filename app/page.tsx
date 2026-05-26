@@ -23,7 +23,7 @@ function Nav() {
           href="#contact"
           className="bg-blue-700 text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-blue-800 transition-colors"
         >
-          Book a Free Trial
+          Book a Trial Class — £10
         </a>
       </div>
     </header>
@@ -92,7 +92,7 @@ function Hero() {
             href="#contact"
             className="bg-blue-700 text-white font-bold px-10 py-4 rounded-full hover:bg-blue-800 transition-colors text-base shadow-xl"
           >
-            Book a Free Trial Session
+            Book a Trial Class — £10
           </a>
           <a
             href="#programs"
@@ -115,8 +115,8 @@ function Hero() {
           </div>
           <div className="w-px h-10 bg-white/20" />
           <div>
-            <span className="block text-3xl font-black">Free</span>
-            <span className="text-white/60">Trial session</span>
+            <span className="block text-3xl font-black">£10</span>
+            <span className="text-white/60">Trial class</span>
           </div>
         </div>
       </div>
@@ -438,8 +438,8 @@ function Contact() {
           Ready to kick off?
         </h2>
         <p className="text-blue-100 text-lg mb-10 max-w-xl mx-auto">
-          Book your child's free trial session today — no commitment, no
-          pressure. Just football. We'll take it from there.
+          Start your child's journey with a £10 trial class — no commitment,
+          no pressure. Just football. We'll take it from there.
         </p>
         <div className="bg-white rounded-3xl p-8 md:p-12 text-left shadow-xl">
           <h3 className="text-2xl font-black text-gray-900 mb-2">
@@ -506,7 +506,7 @@ function Contact() {
               type="submit"
               className="w-full bg-blue-700 text-white font-bold py-4 rounded-xl hover:bg-blue-800 transition-colors text-sm tracking-wide"
             >
-              Book Free Trial Session →
+              Book a Trial Class — £10 →
             </button>
           </form>
           <p className="text-center text-xs text-gray-400 mt-4">
