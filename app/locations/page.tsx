@@ -5,7 +5,17 @@ import Footer from "@/components/Footer";
 const sessions = [
   {
     day: "Monday",
+    location: "Mead Primary",
+    tag: "After School Football Club",
+    time: "3:10 – 4:10pm",
+    venue: "Mead Primary School",
+    address: "Amersham Road, Romford, RM3 9JD",
+    maps: "https://maps.google.com/?q=Amersham+Road,+Romford,+RM3+9JD",
+  },
+  {
+    day: "Monday",
     location: "Collier Row",
+    tag: "",
     time: "5:00 – 6:00pm",
     venue: "Forest Row Centre",
     address: "Lodge Lane, Collier Row, Romford, Essex, RM5 2LD",
@@ -14,6 +24,7 @@ const sessions = [
   {
     day: "Tuesday",
     location: "Harold Hill",
+    tag: "",
     time: "5:00 – 6:00pm",
     venue: "Drapers Academy",
     address: "Settle Road, Harold Hill, Romford, RM3 9XR",
@@ -22,6 +33,7 @@ const sessions = [
   {
     day: "Thursday",
     location: "Dagenham",
+    tag: "",
     time: "5:00 – 6:00pm",
     venue: "Castle Green Leisure Centre",
     address: "Gale Street, Dagenham, Essex, RM9 4UN",
@@ -75,10 +87,15 @@ export default function LocationsPage() {
                 {/* Details */}
                 <div className="flex-1 p-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                   <div>
-                    <div className="flex items-center gap-2 mb-1">
+                    <div className="flex flex-wrap items-center gap-2 mb-1">
                       <span className="text-xl font-black text-gray-900">
                         {s.location}
                       </span>
+                      {s.tag && (
+                        <span className="bg-gray-100 text-gray-600 text-xs font-semibold px-2 py-0.5 rounded-full">
+                          {s.tag}
+                        </span>
+                      )}
                       <span className="bg-blue-50 text-blue-700 text-xs font-semibold px-2 py-0.5 rounded-full">
                         {s.time}
                       </span>
@@ -107,35 +124,6 @@ export default function LocationsPage() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* School Clubs */}
-          <div className="mt-12 rounded-2xl bg-blue-50 border border-blue-100 p-8">
-            <div className="flex items-start gap-4">
-              <div className="text-3xl">🏫</div>
-              <div>
-                <h3 className="text-xl font-black text-gray-900 mb-1">
-                  School Clubs
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  JGFA runs an exclusive after-school football club at{" "}
-                  <span className="font-semibold text-gray-800">
-                    Mead Primary School
-                  </span>
-                  . Places are limited and available to pupils only. To
-                  register, contact us directly by email.
-                </p>
-                <p className="text-xs text-gray-400 italic mb-4">
-                  ⚠️ Trial sessions are not available at school clubs.
-                </p>
-                <a
-                  href="mailto:jack.jgfa@outlook.com"
-                  className="inline-flex items-center gap-2 bg-blue-700 text-white text-sm font-bold px-6 py-3 rounded-full hover:bg-blue-800 transition-colors"
-                >
-                  ✉️ Contact Us to Register
-                </a>
-              </div>
-            </div>
           </div>
 
           {/* CTA */}
