@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
 /* ─── Nav ─── */
 function Nav() {
@@ -40,7 +41,22 @@ function Nav() {
 }
 
 /* ─── Hero ─── */
+const heroSlides = [
+  { src: "/hero/hero1.jpg", alt: "Young players competing on the pitch" },
+  { src: "/hero/hero2.jpg", alt: "Football stadium lights" },
+  { src: "/hero/hero3.jpg", alt: "Junior football action" },
+];
+
 function Hero() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % heroSlides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="pt-16 bg-white min-h-screen flex items-center">
       <div className="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
@@ -90,24 +106,37 @@ function Hero() {
           </div>
         </div>
         <div className="relative hidden md:block">
-          <div className="aspect-[4/5] rounded-3xl bg-gradient-to-br from-green-500 to-green-700 overflow-hidden relative">
-            {/* Photo slot — replace src when photos arrive */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center text-white/40 text-center p-8">
-              <svg
-                className="w-16 h-16 mb-4 opacity-50"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+          <div className="aspect-[4/5] rounded-3xl overflow-hidden relative bg-gray-100">
+            {heroSlides.map((slide, i) => (
+              <div
+                key={slide.src}
+                className="absolute inset-0 transition-opacity duration-1000"
+                style={{ opacity: i === current ? 1 : 0 }}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                <Image
+                  src={slide.src}
+                  alt={slide.alt}
+                  fill
+                  className="object-cover"
+                  priority={i === 0}
+                  sizes="(max-width: 768px) 100vw, 50vw"
                 />
-              </svg>
-              <p className="text-sm font-medium">Hero photo coming soon</p>
-            </div>
+              </div>
+            ))}
+            {/* Dark overlay for depth */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-3xl" />
+          </div>
+          {/* Dot indicators */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+            {heroSlides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setCurrent(i)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  i === current ? "bg-white scale-125" : "bg-white/50"
+                }`}
+              />
+            ))}
           </div>
           {/* Floating badge */}
           <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl p-4 flex items-center gap-3">
