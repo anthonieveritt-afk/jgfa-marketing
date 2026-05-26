@@ -69,8 +69,8 @@ function Hero() {
         </div>
       ))}
 
-      {/* Dark gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+      {/* Light overlay — keeps photos bright, text readable */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40" />
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
@@ -103,7 +103,7 @@ function Hero() {
         </div>
 
         {/* Stats bar */}
-        <div className="mt-16 flex items-center justify-center gap-10 text-sm">
+        <div className="mt-16 flex items-center justify-center gap-10 text-sm" style={{textShadow:'0 1px 6px rgba(0,0,0,0.8)'}}>
           <div>
             <span className="block text-3xl font-black">5–11</span>
             <span className="text-white/60">Ages welcome</span>
