@@ -85,7 +85,7 @@ function Hero() {
         <p className="text-xl md:text-2xl text-white leading-relaxed mb-10 max-w-2xl mx-auto">
           Football development &amp; skills training for aspiring players aged 5–11.
           <br className="hidden md:block" />
-          <span className="text-white/90 text-lg">Collier Row · Dagenham · Harold Hill · Upminster · Basildon</span>
+          <span className="text-white/90 text-lg">Collier Row · Dagenham · Harold Hill · After-school at Mead Primary</span>
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -110,7 +110,7 @@ function Hero() {
           </div>
           <div className="w-px h-10 bg-white/20" />
           <div>
-            <span className="block text-3xl font-black">5</span>
+            <span className="block text-3xl font-black">4</span>
             <span className="text-white/90">Locations</span>
           </div>
           <div className="w-px h-10 bg-white/20" />
@@ -199,7 +199,7 @@ function Programs() {
             every young player.
           </h2>
           <p className="text-gray-400 text-sm mt-4">
-            Sessions available in Collier Row · Dagenham · Harold Hill · Upminster · Basildon
+            Sessions available in Collier Row · Dagenham · Harold Hill · After-school at Mead Primary
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
@@ -547,7 +547,7 @@ function Footer() {
           <p className="text-xs">© {new Date().getFullYear()} JGFA Football. All rights reserved.</p>
         </div>
         <p className="text-center text-xs text-gray-600 border-t border-gray-800 pt-4">
-          Sessions in Collier Row · Dagenham · Harold Hill · Upminster · Basildon
+          Sessions in Collier Row · Dagenham · Harold Hill · After-school at Mead Primary
         </p>
       </div>
     </footer>
