@@ -13,7 +13,7 @@ function Nav() {
             JGFA Football
           </span>
         </div>
-        <nav className="hidden md:flex items-center gap-8 text-sm text-white/80">
+        <nav className="hidden md:flex items-center gap-8 text-sm text-white">
           <a href="#programs" className="hover:text-white transition-colors">Programs</a>
           <a href="#why" className="hover:text-white transition-colors">Why JGFA</a>
           <a href="#gallery" className="hover:text-white transition-colors">Gallery</a>
@@ -69,8 +69,8 @@ function Hero() {
         </div>
       ))}
 
-      {/* Light overlay — keeps photos bright, text readable */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40" />
+      {/* Dark overlay for text readability */}
+      <div className="absolute inset-0 bg-black/65" />
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center text-white">
@@ -82,10 +82,10 @@ function Hero() {
           <br />
           <span className="text-blue-400">Starts Here.</span>
         </h1>
-        <p className="text-xl md:text-2xl text-white/80 leading-relaxed mb-10 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl text-white leading-relaxed mb-10 max-w-2xl mx-auto">
           Football development &amp; skills training for aspiring players aged 5–11.
           <br className="hidden md:block" />
-          <span className="text-white/60 text-lg">Collier Row · Dagenham · Harold Hill · Upminster · Basildon</span>
+          <span className="text-white/90 text-lg">Collier Row · Dagenham · Harold Hill · Upminster · Basildon</span>
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
@@ -106,17 +106,17 @@ function Hero() {
         <div className="mt-16 flex items-center justify-center gap-10 text-sm" style={{textShadow:'0 1px 6px rgba(0,0,0,0.8)'}}>
           <div>
             <span className="block text-3xl font-black">5–11</span>
-            <span className="text-white/60">Ages welcome</span>
+            <span className="text-white/90">Ages welcome</span>
           </div>
           <div className="w-px h-10 bg-white/20" />
           <div>
             <span className="block text-3xl font-black">5</span>
-            <span className="text-white/60">Locations</span>
+            <span className="text-white/90">Locations</span>
           </div>
           <div className="w-px h-10 bg-white/20" />
           <div>
             <span className="block text-3xl font-black">£10</span>
-            <span className="text-white/60">Trial class</span>
+            <span className="text-white/90">Trial class</span>
           </div>
         </div>
       </div>
@@ -135,7 +135,7 @@ function Hero() {
       </div>
 
       {/* Scroll hint */}
-      <div className="absolute bottom-8 right-8 z-10 text-white/40 text-xs tracking-widest rotate-90 hidden md:block">
+      <div className="absolute bottom-8 right-8 z-10 text-white/70 text-xs tracking-widest rotate-90 hidden md:block">
         SCROLL
       </div>
     </section>
