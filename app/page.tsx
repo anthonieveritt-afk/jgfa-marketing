@@ -315,6 +315,12 @@ const gallerySections = [
       { src: "/gallery/g40.jpg", alt: "May Camp 2026" },
       { src: "/gallery/g41.jpg", alt: "May Camp 2026" },
       { src: "/gallery/g42.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g43.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g44.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g45.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g46.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g47.jpg", alt: "May Camp 2026" },
+      { src: "/gallery/g48.jpg", alt: "May Camp 2026" },
     ],
   },
   {
