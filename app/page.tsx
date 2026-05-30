@@ -472,15 +472,7 @@ function Contact() {
               <a href="https://formsmarts.com/form/2dpg">Can&apos;t see the form? Click here</a>.
             </iframe>
           </div>
-          <p className="text-center text-xs text-gray-400 mt-4">
-            Or email us directly at{" "}
-            <a
-              href="mailto:jack.jgfa@outlook.com"
-              className="text-blue-700 hover:underline"
-            >
-              jack.jgfa@outlook.com
-            </a>
-          </p>
+
         </div>
       </div>
     </section>
