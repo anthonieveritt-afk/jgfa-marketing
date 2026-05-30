@@ -324,6 +324,16 @@ const gallerySections = [
     ],
   },
   {
+    title: "August Camp 2026",
+    photos: [
+      { src: "/gallery/g49.jpg", alt: "August Camp 2026" },
+      { src: "/gallery/g50.jpg", alt: "August Camp 2026" },
+      { src: "/gallery/g51.jpg", alt: "August Camp 2026" },
+      { src: "/gallery/g52.jpg", alt: "August Camp 2026" },
+      { src: "/gallery/g53.jpg", alt: "August Camp 2026" },
+    ],
+  },
+  {
     title: "Sessions & Training",
     photos: [
       { src: "/gallery/g1.jpg", alt: "JGFA session" },
