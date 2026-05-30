@@ -324,13 +324,13 @@ const gallerySections = [
     ],
   },
   {
-    title: "August Camp 2026",
+    title: "August Camp",
     photos: [
-      { src: "/gallery/g49.jpg", alt: "August Camp 2026" },
-      { src: "/gallery/g50.jpg", alt: "August Camp 2026" },
-      { src: "/gallery/g51.jpg", alt: "August Camp 2026" },
-      { src: "/gallery/g52.jpg", alt: "August Camp 2026" },
-      { src: "/gallery/g53.jpg", alt: "August Camp 2026" },
+      { src: "/gallery/g49.jpg", alt: "August Camp" },
+      { src: "/gallery/g50.jpg", alt: "August Camp" },
+      { src: "/gallery/g51.jpg", alt: "August Camp" },
+      { src: "/gallery/g52.jpg", alt: "August Camp" },
+      { src: "/gallery/g53.jpg", alt: "August Camp" },
     ],
   },
   {
