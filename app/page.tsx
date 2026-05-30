@@ -461,67 +461,17 @@ function Contact() {
           <p className="text-gray-400 text-sm mb-8">
             Fill in the form below and we'll be in touch within 24 hours.
           </p>
-          <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1.5">
-                  Parent / Guardian Name
-                </label>
-                <input
-                  type="text"
-                  placeholder="Your name"
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                />
-              </div>
-              <div>
-                <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1.5">
-                  Child's Name & Age
-                </label>
-                <input
-                  type="text"
-                  placeholder="e.g. Marcus, age 8"
-                  className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1.5">
-                Email Address
-              </label>
-              <input
-                type="email"
-                placeholder="you@email.com"
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1.5">
-                Interested In
-              </label>
-              <select className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                <option>After-School Club</option>
-                <option>Holiday Camp</option>
-                <option>Skills Academy</option>
-                <option>Not sure yet</option>
-              </select>
-            </div>
-            <div>
-              <label className="text-xs font-semibold text-gray-500 uppercase tracking-wide block mb-1.5">
-                Anything else?
-              </label>
-              <textarea
-                rows={3}
-                placeholder="Any questions, experience level, availability..."
-                className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent resize-none"
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-blue-700 text-white font-bold py-4 rounded-xl hover:bg-blue-800 transition-colors text-sm tracking-wide"
+          <div className="w-full overflow-x-auto">
+            <iframe
+              src="https://formsmarts.com/form/2dpg?mode=h5embed&lay=2"
+              allow="camera; fullscreen; geolocation"
+              allowFullScreen
+              style={{ height: 1705, width: 640, border: "none", maxWidth: "100%" }}
+              className="w-full"
             >
-              Book a Trial Class — £10 →
-            </button>
-          </form>
+              <a href="https://formsmarts.com/form/2dpg">Can&apos;t see the form? Click here</a>.
+            </iframe>
+          </div>
           <p className="text-center text-xs text-gray-400 mt-4">
             Or email us directly at{" "}
             <a
